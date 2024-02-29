@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    let numberInput = +prompt("Enter a number: ");
+    let total = 0;
+
+    function checkIsPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function sumOfListPrime() {
+        for (let i = 2; i <= numberInput; i++) {
+            if (checkIsPrime(i)) {
+                total += i;
+            }
+        }
+
+        return total;
+    }
+
+    let result = sumOfListPrime();
+    console.log(result);
+</script>
+</body>
+</html>

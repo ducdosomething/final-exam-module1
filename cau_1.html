@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    let scoreArr = [6, 8, 5, 10, 9];
+    let totalNumberOfScore = scoreArr.length;
+    let totalPoint = 0;
+    let averagePoint = 0;
+    function findAvg(scoreArr) {
+        for (let i = 0; i < totalNumberOfScore; i++) {
+            totalPoint += scoreArr[i];
+        }
+        averagePoint = totalPoint / totalNumberOfScore;
+        return averagePoint;
+    }
+    let result = findAvg(scoreArr);
+    console.log(" The average point of the list is: " + result);
+</script>
+</body>
+</html>
